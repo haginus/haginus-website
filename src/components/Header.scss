@@ -1,0 +1,46 @@
+header {
+  .cover {
+    height: 38rem;
+    padding: 3rem 6rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #0f0f0f;
+
+    .profile-picture {
+      border-radius: 50%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-description {
+      color: #fff;
+      margin: 0;
+      margin-left: 4rem;
+
+      h1 {
+        font-weight: 400;
+        font-size: 6rem;
+        margin: 0;
+
+        .aka {
+          font-weight: 300;
+          font-size: 2rem;
+        }
+      }
+
+      h2 {
+        font-weight: 200;
+        font-size: 4rem;
+        margin-top: 1rem;
+      }
+
+      h3 {
+        font-weight: 300;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  
+}
