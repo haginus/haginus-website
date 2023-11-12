@@ -1,5 +1,5 @@
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   position: relative;
 
@@ -8,10 +8,10 @@ section {
   
     .sticky-content {
       position: sticky;
-      top: 1.5rem;
+      top: 1rem;
 
       p {
-        margin-top: 0.5rem;
+        margin-top: 0.25rem;
         color: #222;
         font-style: italic;
       }
