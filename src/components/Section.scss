@@ -4,7 +4,7 @@ section {
   position: relative;
 
   .section-description {
-    flex: 1 1 100px;
+    min-width: 15rem;
   
     .sticky-content {
       position: sticky;
@@ -20,8 +20,8 @@ section {
   }
 
   .section-body {
-    flex: 3;
-    /* font-size: 30px; */
+    flex: 1;
+    min-width: 0;
   }
 }
 
