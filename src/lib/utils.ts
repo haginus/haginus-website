@@ -17,3 +17,8 @@ export async function getDominantColor(imageElement: HTMLImageElement) {
   const color = await colorThief.getColor(imageElement) as [number, number, number];
   return rgbToHex(...color);
 }
+
+export function formatDate(dateStr: string) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+}
