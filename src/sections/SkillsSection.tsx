@@ -11,7 +11,7 @@ import TechnologyChip from "../components/TechnologyChip";
 export default function SkillsSection() {
   return (
     <Section title="Skills" subtitle="Resume of the resume">
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ width: 'unset' }} aria-label="Skills table">
         <TableBody>
           <SkillRow title="Frontend">
             <TechnologyChip technology="typescript" />
