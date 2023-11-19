@@ -4,6 +4,7 @@ import Header from './components/Header';
 import SkillsSection from './sections/SkillsSection';
 import WorkExperienceSection from './sections/WorkExperienceSection';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import EducationSection from './sections/EducationSection';
 
 export const theme = createTheme({
   palette: {
@@ -25,6 +26,7 @@ function App() {
       <main>
         <SkillsSection />
         <WorkExperienceSection />
+        <EducationSection />
       </main>
     </ThemeProvider>
   );

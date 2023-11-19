@@ -123,7 +123,9 @@ function WorkExperienceItem({ company, jobTitle, startDate, endDate, links, chil
       >
         {formatDate(startDate)} - {endDate ? formatDate(endDate) : 'Present'}
       </Typography>
-      <img src={company.logo} height={80} style={{ margin: '0.5rem 0' }} />
+      <Box className="nsl" sx={{ my: 2 }}>
+        <img src={company.logo} height={80} />
+      </Box>
       <Typography variant="h5" component="div">
         <Link href={company.website} target="_blank">
           {company.name}

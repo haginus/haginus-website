@@ -18,3 +18,9 @@ export interface WorkExperienceItem {
     url: string;
   }[];
 }
+
+export interface Faculty {
+  name: string;
+  university: string;
+  website: string;
+}
