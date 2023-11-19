@@ -24,8 +24,8 @@ export default function Header() {
         </div>
         <div className="profile-description">
           <h1>
-            <span>Andrei Hagi&nbsp;</span>
-            <span className="aka">aka Haginus</span>
+            <span>Andrei Hagi </span>
+            <span className="aka">aka&nbsp;Haginus</span>
           </h1>
           <h2 className="role">Software Engineer</h2>
           <h3 className="location">Bucharest, RO 🇷🇴</h3>
@@ -77,7 +77,11 @@ function SocialLink({ title, icon, link, text }: SocialLinkProps) {
         sx={{ height: 40 }}
       >
         {icon}
-        {text && <Typography sx={{ textTransform: 'none', ml: 0.25, fontSize: '0.8rem' }}>{text}</Typography>}
+        {text && (
+          <Typography sx={{ textTransform: 'none', ml: 0.25, fontSize: '0.8rem', display: { xs: 'none', md: 'unset' } }}>
+            {text}
+          </Typography>
+        )}
       </Fab>
     </Tooltip>
   )

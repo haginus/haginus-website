@@ -21,7 +21,7 @@ header {
       h1 {
         font-weight: 400;
         font-size: 3rem;
-        margin: 0;
+        line-height: 1.5rem;
 
         .aka {
           font-weight: 300;
@@ -43,6 +43,20 @@ header {
         margin-top: 0.75rem;
         display: flex;
         column-gap: 0.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cover {
+      flex-direction: column;
+      height: unset;
+      padding: 1rem;
+
+      .profile-description {
+        margin-left: 0;
+        margin-top: 2rem;
+        width: 100%;
       }
     }
   }

@@ -23,5 +23,14 @@ section {
     flex: 1;
     min-width: 0;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .section-description {
+      min-width: 0;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
