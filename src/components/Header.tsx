@@ -12,6 +12,9 @@ export default function Header() {
         <div className="nsl">
           <DropShadowImage 
             className={styles["profile-picture"]} 
+            width={200}
+            height={200}
+            priority
             src="/images/pp.jpeg" 
             alt="Profile picture" 
           />

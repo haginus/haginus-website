@@ -1,8 +1,9 @@
 "use client";
 import { getDominantColor } from "@/lib/utils";
+import Image from "next/image";
 import React from "react";
 
-type DropShadowImageProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & {
+type DropShadowImageProps = React.ComponentProps<typeof Image> & {
   dropShadow?: {
     x?: number;
     y?: number;
@@ -17,21 +18,21 @@ export default function DropShadowImage({ dropShadow: _dropShadow, ...imgProps }
     blurRadius: _dropShadow?.blurRadius ?? 180,
   };
 
-  const profilePictureRef = React.useRef<HTMLImageElement>(null);
+  const imageRef = React.useRef<HTMLImageElement>(null);
 
   React.useEffect(() => {
     (async () => {
-      if(!profilePictureRef.current || !imgProps.src) return;
-      if(!profilePictureRef.current.style.filter) {
-        profilePictureRef.current.style.transition = `filter 0.5s ease-in-out`;
-        profilePictureRef.current.style.filter = `drop-shadow(0 0 0 transparent)`;
+      if(!imageRef.current || !imgProps.src) return;
+      if(!imageRef.current.style.filter) {
+        imageRef.current.style.transition = `filter 0.5s ease-in-out`;
+        imageRef.current.style.filter = `drop-shadow(0 0 0 transparent)`;
       };
-      const color = await getDominantColor(profilePictureRef.current);
-      profilePictureRef.current.style.filter = `drop-shadow(${dropShadow.x}px ${dropShadow.y}px ${dropShadow.blurRadius}px ${color})`;
+      const color = await getDominantColor(imageRef.current);
+      imageRef.current.style.filter = `drop-shadow(${dropShadow.x}px ${dropShadow.y}px ${dropShadow.blurRadius}px ${color})`;
     })();
   }, [dropShadow, imgProps.src]);
 
   return (
-    <img {...imgProps} ref={profilePictureRef} />
+    <Image {...imgProps} ref={imageRef} />
   )
 }
