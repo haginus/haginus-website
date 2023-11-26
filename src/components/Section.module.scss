@@ -3,6 +3,10 @@
   display: flex;
   position: relative;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   .section-description {
     min-width: 15rem;
   
