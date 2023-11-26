@@ -148,7 +148,7 @@ function WorkExperienceItem({ company, jobTitle, startDate, endDate, links, chil
   );
 }
 
-const companies: Record<'fmi' | 'ogor', Company> = {
+const companies = {
   fmi: {
     name: 'Faculty of Mathematics and Informatics',
     logo: '/images/logos/fmi.png',
@@ -159,5 +159,5 @@ const companies: Record<'fmi' | 'ogor', Company> = {
     logo: '/images/logos/ogor.png',
     website: 'https://ogor.ro',
   },
-}
+} satisfies Record<string, Company>;
 

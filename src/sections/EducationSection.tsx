@@ -2,14 +2,15 @@ import { Box, Typography } from "@mui/material";
 import Section from "../components/Section";
 import { Faculty } from "../lib/types";
 import { formatDate } from "../lib/utils";
+import Link from "@/components/Link";
 
-const faculties: Record<'fmi', Faculty> = {
+const faculties = {
   fmi: {
     name: "Faculty of Mathematics and Informatics",
     university: "University of Bucharest",
     website: "https://fmi.unibuc.ro",
   },
-}
+} satisfies Record<string, Faculty>;
 
 export default function EducationSection() {
   return (
@@ -55,12 +56,12 @@ interface EducationItemProps {
 function EducationItem({ faculty, startDate, endDate, field, degree, grades }: EducationItemProps) {
   return (
     <Box sx={{ mb: 3 }}>
-      <Typography variant="h5" component="div">
+      <Typography variant="h6" component="div">
         {degree} in {field}
       </Typography>
       <Typography variant="h6" component="div">
-        <span>{faculty.name}, </span>
-        <span className="muted">{faculty.university}</span>
+        <Link href={faculty.website}>{faculty.name}</Link>
+        <span className="muted"> | {faculty.university}</span>
       </Typography>
       <Typography variant="caption" component="div" sx={{ color: 'text.secondary' }}>
         {formatDate(startDate)} - {formatDate(endDate)}
