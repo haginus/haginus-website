@@ -1,35 +1,29 @@
 import React from "react";
-import "./Header.scss";
-import { getDominantColor } from "../lib/utils";
+import styles from "./Header.module.scss";
 import { Fab, Tooltip, Typography } from "@mui/material";
 import { GitHub, LinkedIn, Email, Phone } from "@mui/icons-material";
+import DropShadowImage from "./DropShadowImage";
 
 export default function Header() {
-
-  const profilePictureRef = React.useRef<HTMLImageElement>(null);
-  
-  React.useEffect(() => {
-    (async () => {
-      if(!profilePictureRef.current) return;
-      const color = await getDominantColor(profilePictureRef.current);
-      profilePictureRef.current.style.filter = `drop-shadow(0 0 180px ${color})`;
-    })();
-  }, []);
   
   return (
-    <header>
-      <div className="cover">
+    <header className={styles.header}>
+      <div className={styles.cover}>
         <div className="nsl">
-          <img className="profile-picture" ref={profilePictureRef} src="pp.jpeg" />
+          <DropShadowImage 
+            className={styles["profile-picture"]} 
+            src="/images/pp.jpeg" 
+            alt="Profile picture" 
+          />
         </div>
-        <div className="profile-description">
+        <div className={styles["profile-description"]}>
           <h1>
             <span>Andrei Hagi </span>
-            <span className="aka">aka&nbsp;Haginus</span>
+            <span className={styles.aka}>aka&nbsp;Haginus</span>
           </h1>
-          <h2 className="role">Software Engineer</h2>
-          <h3 className="location">Bucharest, RO 🇷🇴</h3>
-          <div className="social">
+          <h2 className={styles.role}>Software Engineer</h2>
+          <h3 className={styles.location}>Bucharest, RO 🇷🇴</h3>
+          <div className={styles.social}>
             <SocialLink 
               title="GitHub" 
               icon={<GitHub />} 

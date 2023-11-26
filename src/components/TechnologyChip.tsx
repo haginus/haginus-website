@@ -5,7 +5,6 @@ interface TechnologyChipProps extends ChipProps {
   technology: keyof typeof technologies;
 }
 
-
 export default function TechnologyChip({ technology, ...props }: TechnologyChipProps) {
   const technologyObject = technologies[technology];
   return (

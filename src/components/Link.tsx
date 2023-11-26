@@ -1,5 +1,5 @@
 import { OpenInNew } from "@mui/icons-material";
-import './Link.scss';
+import styles from './Link.module.scss';
 
 interface LinkProps {
   href: string;
@@ -9,7 +9,7 @@ interface LinkProps {
 
 export default function Link({ children, ...anchorProps }: LinkProps) {
   return (
-    <a {...anchorProps} className="link">
+    <a {...anchorProps} className={styles.link}>
       {children}
       <OpenInNew sx={{ fontSize: '0.8em', verticalAlign: 'top' }} />
     </a>

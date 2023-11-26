@@ -48,13 +48,13 @@ export default function WorkExperienceSection() {
               and the UI/UX designer utilizing Figma for design and user experience integration.
             </li>
             <li>
-              Spearheaded the development of a React Native application from scratch, expanding the frontend app's reach 
+              Spearheaded the development of a React Native application from scratch, expanding the frontend app&apos;s reach 
               to iOS and Android platforms. Employed technologies such as Redux, React Native Maps, Reanimated, 
               and more for a seamless mobile experience.
             </li>
             <li>
               Led the development of a React Native design component library, streamlining the sharing of these elements 
-              across applications to foster uniformity and improve the development process's efficiency.
+              across applications to foster uniformity and improve the development process&apos;s efficiency.
             </li>
           </ul>
         </WorkExperienceItem>
@@ -82,7 +82,7 @@ export default function WorkExperienceSection() {
           <ul className="list">
             <li>Successfully managed and maintained the faculty website, ensuring functionality, user-friendliness, and optimal performance.</li>
             <li>Designed, developed, and maintained applications aimed at enhancing the overall faculty experience for students, teachers, and administrative staff.</li>
-            <li>Generated SSL certificates for associated domains utilizing tools like Let's Encrypt, configuring NGINX servers running in Docker containers, and implementing tools like Certbot for automated certificate renewal.</li>
+            <li>Generated SSL certificates for associated domains utilizing tools like Let&apos;s Encrypt, configuring NGINX servers running in Docker containers, and implementing tools like Certbot for automated certificate renewal.</li>
             <li>Effectively managed DNS records for the faculty domain to route traffic to the server hosting the applications.</li>
             <li>Provided prompt and comprehensive support to users encountering application-related difficulties, resolving issues efficiently.</li>
             <li>Responsively addressed user feedback and actively tackled reported application bugs, thereby elevating user satisfaction and improving application quality.</li>

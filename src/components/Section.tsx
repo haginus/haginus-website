@@ -1,5 +1,5 @@
 import React from 'react';
-import './Section.scss';
+import styles from './Section.module.scss';
 
 interface SectionProps {
   title: string;
@@ -9,14 +9,14 @@ interface SectionProps {
 
 export default function Section({ title, subtitle, children }: SectionProps) {
   return (
-    <section>
-      <div className="section-description">
-        <div className="sticky-content">
+    <section className={styles.section}>
+      <div className={styles["section-description"]}>
+        <div className={styles["sticky-content"]}>
           <h2>{title}</h2>
           <p>{subtitle}</p>
         </div>
       </div>
-      <div className="section-body">
+      <div className={styles["section-body"]}>
         {children}
       </div>
     </section>
