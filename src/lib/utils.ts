@@ -22,3 +22,10 @@ export function formatDate(dateStr: string) {
   const date = new Date(dateStr);
   return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 }
+
+export function validateSearchParam(param: string | null, defaultValue: string, choices?: string[]) {
+  if(!param || !choices?.includes(param)) {
+    return defaultValue;
+  }
+  return param;
+}

@@ -41,3 +41,7 @@ main {
 .muted {
   color: #666;
 }
+
+abbr[title] {
+  cursor: help;
+}
