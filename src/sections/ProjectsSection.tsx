@@ -148,7 +148,34 @@ const projects: ProjectItemProps[] = [
       </>
     )
   },
-  // TODO: Add https://github.com/creative-plus
+  {
+    id: 'learning-platform',
+    title: 'Learning platform',
+    subtitle: 'Angular & Java Spring app for Erasmus volunteers',
+    year: '2022',
+    stack: ['typescript', 'angular', 'spring', 'mysql'],
+    git: [
+      { title: 'Frontend', url: 'https://github.com/creative-plus/learning-platform-frontend' },
+      { title: 'Backend', url: 'https://github.com/creative-plus/learning-platform-backend' },
+    ],
+    impact: 3,
+    status: 'Intermitent use',
+    children: (
+      <>
+        <p>
+          Web platform made for the <Link href="https://www.creative-plus.ro">Creative+ NGO</Link> for its Erasmus volunteers.
+          Each time a new group of volunteers arrives for a long-term project, they have to go through a training period, which is
+          made using this platform.
+        </p>
+        <br />
+        <p>
+          The platform allows permanent NGO members to create courses, which are made of lessons and quizzes. They can
+          make these courses available to the volunteers, and they can track their progress. Also, every volunteer group has a leaderboard
+          which shows the progress of each member.
+        </p>
+      </>
+    )
+  },
   // TODO: Add https://github.com/haginus/samokov-dreams
   // TODO: Add https://github.com/haginus/localize-rn
   // TODO: Add https://github.com/haginus/safebuy
