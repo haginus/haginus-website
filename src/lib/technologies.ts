@@ -40,6 +40,10 @@ export const technologies = {
     name: 'Java Spring',
     icon: '/images/technologies/spring.svg',
   },
+  python: {
+    name: 'Python',
+    icon: '/images/technologies/python.svg',
+  },
   mysql: {
     name: 'MySQL',
     icon: '/images/technologies/mysql.svg',

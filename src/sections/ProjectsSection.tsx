@@ -60,7 +60,7 @@ const projects: ProjectItemProps[] = [
     subtitle: 'My master\'s paper',
     logo: '/images/projects/koga-wash.png',
     year: '2023',
-    stack: ['typescript', 'angular', 'node', 'nestjs', 'mysql', 'react', 'docker', 'kubernetes'],
+    stack: ['typescript', 'angular', 'node', 'nestjs', 'mysql', 'react', 'python', 'docker', 'kubernetes'],
     git: [
       { title: 'Frontend', url: 'https://github.com/haginus/koga-wash-frontend' },
       { title: 'Backend', url: 'https://github.com/haginus/koga-wash' },
@@ -176,7 +176,37 @@ const projects: ProjectItemProps[] = [
       </>
     )
   },
-  // TODO: Add https://github.com/haginus/samokov-dreams
+  {
+    id: 'samokov-dreams',
+    title: 'Samokov Dreams',
+    subtitle: 'Angular & Firebase app done in a Youth Exchange',
+    year: '2021',
+    stack: ['typescript', 'angular', 'firebase'],
+    git: [
+      { url: 'https://github.com/haginus/samokov-dreams' },
+    ],
+    links: [
+      { title: 'Live version', url: 'https://samokov-dreams.web.app' },
+    ],
+    impact: 3,
+    status: 'Deployed (Hosted on Firebase)',
+    children: (
+      <>
+        <p>
+          One activity during a youth exchange about arts in Samokov, Bulgaria was to come up with ideas
+          for collaborative art done with the people living in the city. My idea was developing a web app
+          where people could take a picture of themselves and then write their dream. All the pictures were
+          then put together in a so-called "wall of dreams".
+        </p>
+        <br />
+        <p>
+          Since the time of development was limited (1 day), I decided to use Angular and Firestore Database,
+          which allowed me to quickly develop an app that was able to collect and display the data to the
+          printing team in real-time.
+        </p>
+      </>
+    )
+  },
   // TODO: Add https://github.com/haginus/localize-rn
   // TODO: Add https://github.com/haginus/safebuy
   // TODO: Add https://github.com/fmilabs/educational-plan
