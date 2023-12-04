@@ -233,8 +233,58 @@ const projects: ProjectItemProps[] = [
       </>
     )
   },
-  // TODO: Add https://github.com/haginus/safebuy
-  // TODO: Add https://github.com/fmilabs/educational-plan
+  {
+    id: 'safebuy',
+    title: 'Safebuy',
+    subtitle: 'Digital asset exchange platform',
+    year: '2022',
+    stack: ['typescript', 'reactNative', 'spring', 'mysql', 'kubernetes'],
+    git: [
+      { title: 'Frontend', url: 'https://github.com/haginus/safebuy-frontend' },
+      { title: 'Backend', url: 'https://github.com/haginus/safebuy' },
+    ],
+    status: 'Finished prototype (not deployed)',
+    children: (
+      <>
+        <p>
+          How can you buy an event ticket from someone you don't know? How can you be sure that the ticket is valid?
+          This is the problem that Safebuy solves. It is a platform that allows people to buy and sell digital assets
+          in a safe way - the seller uploads the asset and sets the price, and the buyer can access the asset after paying.
+          Then, they can confirm that the asset is valid, and the seller gets the money.
+        </p>
+        <br />
+        <p>
+          The backend of the app is developed with Java Spring, on a microservices architecture, and the frontend is
+          a React Native app, which allows the user to view the bought assets offline.
+        </p>
+      </>
+    )
+  },
+  {
+    id: 'educational-plan',
+    title: 'Educational Plan',
+    subtitle: 'Platform for the Faculty of Mathematics and Informatics',
+    year: '2023',
+    stack: ['typescript', 'react', 'node', 'nestjs', 'mysql', 'docker'],
+    git: [
+      { url: 'https://github.com/fmilabs/educational-plan' },
+    ],
+    links: [
+      { title: 'Live version', url: 'https://cursuri.fmi.unibuc.ro' },
+    ],
+    impact: 3,
+    status: 'Deployed',
+    children: (
+      <>
+        <p>
+          Web platform made for the Factulty of Mathematics and Informatics of UB, 
+          in order to list the mandatory and optional courses for each study program.
+          Each teacher can sign in with their Microsoft institutional account and
+          add the courses they teach, the credits and the syllabus.
+        </p>
+      </>
+    )
+  },
 ]
 
 export default function ProjectsSection() {
