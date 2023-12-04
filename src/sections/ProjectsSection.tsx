@@ -196,7 +196,7 @@ const projects: ProjectItemProps[] = [
           One activity during a youth exchange about arts in Samokov, Bulgaria was to come up with ideas
           for collaborative art done with the people living in the city. My idea was developing a web app
           where people could take a picture of themselves and then write their dream. All the pictures were
-          then put together in a so-called "wall of dreams".
+          then put together in a so-called &quot;wall of dreams&quot;.
         </p>
         <br />
         <p>
@@ -247,7 +247,7 @@ const projects: ProjectItemProps[] = [
     children: (
       <>
         <p>
-          How can you buy an event ticket from someone you don't know? How can you be sure that the ticket is valid?
+          How can you buy an event ticket from someone you don&apos;t know? How can you be sure that the ticket is valid?
           This is the problem that Safebuy solves. It is a platform that allows people to buy and sell digital assets
           in a safe way - the seller uploads the asset and sets the price, and the buyer can access the asset after paying.
           Then, they can confirm that the asset is valid, and the seller gets the money.
