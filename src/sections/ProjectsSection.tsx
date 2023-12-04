@@ -207,7 +207,32 @@ const projects: ProjectItemProps[] = [
       </>
     )
   },
-  // TODO: Add https://github.com/haginus/localize-rn
+  {
+    id: 'localize-rn',
+    title: 'Localize RN',
+    subtitle: 'Web tool to localize React Native apps',
+    year: '2023',
+    stack: ['typescript', 'react'],
+    git: [
+      { url: 'https://github.com/haginus/localize-rn' },
+    ],
+    links: [
+      { title: 'Live version', url: 'https://haginus.github.io/localize-rn/' },
+    ],
+    impact: 2,
+    status: 'Deployed',
+    children: (
+      <>
+        <p>
+          Web app that I developed in order to help me localize React Native apps.
+          It allows to upload a JSON/TS/JS file containing the translations, and then
+          provide a UI to edit them. Additionally, it allows automated translation using
+          the Google Translate API. After the user is done editing, they can download
+          back the file with the translations.
+        </p>
+      </>
+    )
+  },
   // TODO: Add https://github.com/haginus/safebuy
   // TODO: Add https://github.com/fmilabs/educational-plan
 ]
