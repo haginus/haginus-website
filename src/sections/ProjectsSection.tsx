@@ -4,8 +4,6 @@ import Section from "../components/Section";
 import Link from "@/components/Link";
 import { technologies } from "@/lib/technologies";
 import TechnologyChip from "@/components/TechnologyChip";
-import { useSearchParams, useRouter } from "next/navigation";
-import { validateSearchParam } from "@/lib/utils";
 import React from "react";
 
 interface ProjectItemProps {
@@ -288,9 +286,8 @@ const projects: ProjectItemProps[] = [
 ]
 
 export default function ProjectsSection() {
-  const router = useRouter();
-  const search = useSearchParams();
-  const sortBy = validateSearchParam(search.get('projectSortBy'), 'impact', ['impact', 'year']);
+  const [sortBy, setSortBy] = React.useState<'impact' | 'year'>("impact");
+
   const sortedProjects = React.useMemo(() => {
     if (sortBy === 'impact') {
       return projects.sort((a, b) => (b.impact ?? 0) - (a.impact ?? 0));
@@ -317,7 +314,7 @@ export default function ProjectsSection() {
             labelId="project-sort-by-label"
             value={sortBy}
             label="Sort by"
-            onChange={(e) => router.replace(`?projectSortBy=${e.target.value}`, { scroll: false })}
+            onChange={(e) => setSortBy(e.target.value as any)}
           >
             <MenuItem value="impact">Impact</MenuItem>
             <MenuItem value="year">Year</MenuItem>
